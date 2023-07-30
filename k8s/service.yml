@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: yuhgmt
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "yuhgmt"
+    port: 8080
+  selector:
+    app: yuhgmt
